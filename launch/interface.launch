@@ -1,0 +1,25 @@
+<launch>
+
+    <!--node name="publisher" pkg="threespace_ros" type="single_imu_publisher.py" required="false"/ -->
+    
+    <arg name="arg1" value="developer"/>
+    <arg name="arg2" value="myo-only"/>
+    <node name="controllable_myo_node" pkg="myo_raw" type="controllable_myo_node.py" args="$(arg arg1) $(arg arg2)" required="true" output="screen" cwd="node" />
+    
+    <node name="prompt2" pkg="myo_raw" type="prompt2.py" required="true" output="screen" cwd="node" />
+    
+    <node name="state_listener" pkg="exercise_interface" type="state_listener" required="true"/>
+    
+    <arg name="using_nao" default="false" />
+    
+    <group if="$(arg using_nao)">
+        <include file="$(find nao_bringup)/nao.launch" />
+        <node name="myo_nao" pkg="myo_nao" type="myo_nao" required="true" output="screen" cwd="node" />
+    </group>
+
+    <node name="recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen" required="true">
+        <param name="lm" value="$(find exercise_interface)/data/7085.lm"/>
+        <param name="dict" value="$(find exercise_interface)/data/7085.dic"/>
+    </node>
+    <node name="exercise_interface" pkg="exercise_interface" type="exercise_interface" required="true" output="screen" cwd="node" />
+</launch>

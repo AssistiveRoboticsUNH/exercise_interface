@@ -1,0 +1,62 @@
+Language model created by QuickLM on Mon Jun 27 04:13:55 EDT 2016
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 8 sentences and 11 words
+
+\data\
+ngram 1=11
+ngram 2=17
+ngram 3=11
+
+\1-grams:
+-0.8293 </s> -0.3010
+-0.8293 <s> -0.2314
+-1.7324 BEGIN -0.2314
+-1.7324 CALIBRATION -0.2314
+-1.7324 HELP -0.2314
+-1.7324 ONE -0.2314
+-1.7324 STOP -0.2314
+-1.7324 TAG -0.2314
+-1.2553 TASK -0.2762
+-1.7324 THREE -0.2314
+-1.7324 TWO -0.2314
+
+\2-grams:
+-1.2041 <s> BEGIN 0.0000
+-1.2041 <s> CALIBRATION 0.0000
+-1.2041 <s> HELP 0.0000
+-1.2041 <s> STOP 0.0000
+-1.2041 <s> TAG 0.0000
+-0.7270 <s> TASK 0.0000
+-0.3010 BEGIN </s> -0.3010
+-0.3010 CALIBRATION </s> -0.3010
+-0.3010 HELP </s> -0.3010
+-0.3010 ONE </s> -0.3010
+-0.3010 STOP </s> -0.3010
+-0.3010 TAG </s> -0.3010
+-0.7782 TASK ONE 0.0000
+-0.7782 TASK THREE 0.0000
+-0.7782 TASK TWO 0.0000
+-0.3010 THREE </s> -0.3010
+-0.3010 TWO </s> -0.3010
+
+\3-grams:
+-0.3010 <s> BEGIN </s>
+-0.3010 <s> CALIBRATION </s>
+-0.3010 <s> HELP </s>
+-0.3010 <s> STOP </s>
+-0.3010 <s> TAG </s>
+-0.7782 <s> TASK ONE
+-0.7782 <s> TASK THREE
+-0.7782 <s> TASK TWO
+-0.3010 TASK ONE </s>
+-0.3010 TASK THREE </s>
+-0.3010 TASK TWO </s>
+
+\end\
