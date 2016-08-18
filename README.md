@@ -33,6 +33,9 @@ source devel/setup.bash
 
 Now your project is configured properly and you may launch the interface with:  
 ```roslaunch exercise_interface interface.launch``` 
+
+There is also a bash script which automatically launches exercise_interface with some configurations. Please refer to https://github.com/ylmeng/myo_raw/blob/master/scripts/launch.sh
+If you have correctly installed the myo_raw package, you should find it under the 'script' folder in that package. Go to that directory to run the script. In the script you may need to replace 'wlan2' with another keyword (e.g. 'eth0') depending on how your network is set up. Use the command ```ifconfig``` to check the setup. Also replace ```source ~/myocp/myo/devel/setup.bash``` with the correct path. 
    
 **If you want to use the Nao in the interface you must do:**  
 ```NAO_IP=10.0.3.16 roslaunch exercise_interface interface.launch using_nao:=true```  
