@@ -46,3 +46,26 @@ http://wiki.ros.org/nao/Tutorials/Installation
 You will need to login and download something from here: https://community.aldebaran.com/ so contact Momotaz for this information.
 Also install this repo, as the naoqi has changed so we have preserved our version:  
 ```git clone https://github.com/idkm23/naoqi.git```
+
+How to use the training interface
+===
+- After you launch the interface, you should see a control panel. The speech recognition program will launch automatically. I suggest you test it first. The output can be seen in the terminal.
+- Click "Launch Myo" to launch Myo armbands.
+- On the Android device, launch the Exercise Learner program. You should be able to see a 3D model.
+- Click "Calibrate Myo" for calibration. Then you may click "No Evaluation" to see how the 3D model tracks your arm.
+- Click "Clear" to move the old ros bag files to a trash folder. 
+- Click "Train Classifier" to start training, and the button caption will automatically become "Stop Training". Perform the exercise till the end. Whenever you reach a critical point of the exercise, say the word "tag".
+- Click "Stop Training" to end training.
+- If you are not satisfied with the training, click "Delete Last" to move the last ros bag to trash. Otherwise click "Train Classifier" again to perform the same task again, if you want to collect more data. I suggest you always calbirate Myo before training.
+- After you collect all the data you want for the same task, click "Begin Trial" to build data. You will see a digram visualizing the data. Close it to proceed. At the end, the Android program will demonstrate the built task for you.
+- You can click "Begin Practice" to try the prompting/evaluation program. Eventually a user will use this program, although from a different interface. Say "stop" when you finish practicing.
+- If everything is ok, go to ```myo_raw/myo_mdp/data```. After you build data, some new files have been created here. Copy all the files to ```myo_raw/myo_mdp/data1``` if it is corresponding to "Task 1". Replace 1 with 2 or 3 for other task types. You do this for running the client interface.
+
+Note
+===
+- You need to calibrate the Myo armbands about every 2 minutes. Use the "No Evaluation" button to see how your arm is tracked.
+- The rosbags are saved in ```myo_raw/data/work```. When you build data, all rosbags in that folder will be regarded as the same task. Old rosbags can be found in ```myo_raw/data/work/bagTrash```
+- Currently we are not using the file ```mdp.pkl```. It was generated for an older version of the program.
+- Sometimes the speech recognition program fails to launch (10~20% chance). Just close the interface and start over again. It only recognize words in the vocabulary.
+
+
