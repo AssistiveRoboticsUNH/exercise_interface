@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=launch client
+Comment=launch client
+Exec=terminator -e "bash -c '/home/assistiverobotics/ros_ws/src/myo_raw/scripts/launch_client.sh;$SHELL'"
+Icon=/home/assistiverobotics/ros_ws/src/exercise_interface/lc.ico
+Terminal=false
+Type=Application
+Categories=Application;
