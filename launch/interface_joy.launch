@@ -18,7 +18,7 @@
     </group>
     
     <node name="joy_node" pkg="joy" type="joy_node"/>
-    <node name="joy_tagger" pkg="exercise_interface" type="joy_tagger.py"/>
+    <node name="joy_tagger" pkg="exercise_interface" type="joy_tag.py"/>
     
     <node name="recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen" required="true">
         <param name="lm" value="$(find exercise_interface)/data/7085.lm"/>
