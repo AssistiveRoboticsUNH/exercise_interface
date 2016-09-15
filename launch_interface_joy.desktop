@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=launch interface
-Comment=launch interface
+Name=launch joy interface
+Comment=launch joy interface
 Exec=terminator -e "bash -c '~/ros_ws/src/myo_raw/scripts/launch_joy.sh;$SHELL'"
-Icon=~/ros_ws/src/exercise_interface/joy.png
+Icon=~/ros_ws/src/exercise_interface/joy.ico
 Terminal=false
 Type=Application
 Categories=Application;
