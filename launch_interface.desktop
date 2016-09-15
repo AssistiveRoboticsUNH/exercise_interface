@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=launch interface
 Comment=launch interface
-Exec=terminator -e "bash -c '/home/assistiverobotics/ros_ws/src/myo_raw/scripts/launch.sh;$SHELL'"
-Icon=/home/assistiverobotics/ros_ws/src/exercise_interface/myo.jpg
+Exec=terminator -e "bash -c '~/ros_ws/src/myo_raw/scripts/launch.sh;$SHELL'"
+Icon=~/ros_ws/src/exercise_interface/myo.jpg
 Terminal=false
 Type=Application
 Categories=Application;
