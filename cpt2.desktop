@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name="Copy Task Two"
+Comment=Copy Task Two
+Exec=terminator -e "bash -c '~/ros_ws/src/exercise_interface/launch/copy_two.sh;$SHELL'"
+Icon=~/ros_ws/src/exercise_interface/23_2.ico
+Terminal=false
+Type=Application
+Categories=Application;
