@@ -20,8 +20,8 @@ MasterInterface::MasterInterface(QMainWindow* parent) : QMainWindow(parent), uiC
 void MasterInterface::on_trainingRecord_clicked() {
 
     // This if-else block produces the toggle-like functionality of the button
-    if(uiComponents->trainingRecord->text() != "stop training") {
-        uiComponents->trainingRecord->setText("stop training");  
+    if(uiComponents->trainingRecord->text() != "Stop training") {
+        uiComponents->trainingRecord->setText("Stop training");  
         uiComponents->trainingRecord->setDown(true); // makes the button look pressed
         
         // start training
@@ -32,7 +32,7 @@ void MasterInterface::on_trainingRecord_clicked() {
         }
 
     }  else {
-        uiComponents->trainingRecord->setText("train");    
+        uiComponents->trainingRecord->setText("Train");    
         uiComponents->trainingRecord->setDown(false);
 
         // stop training
@@ -93,15 +93,15 @@ void MasterInterface::on_naoLaunch_clicked() {
     std_msgs::Int32 msg;
 
     // This if-else produces the toggle-like functionality of the button by checking & changing the text of the button for every click
-    if(uiComponents->naoLaunch->text() != "stop Nao") {
-        uiComponents->naoLaunch->setText("stop Nao");  
+    if(uiComponents->naoLaunch->text() != "Stop Nao") {
+        uiComponents->naoLaunch->setText("Stop Nao");  
         uiComponents->naoLaunch->setDown(true);
         
         msg.data = 3;
         exerciseMode_pub.publish(msg);
 
     }  else {
-        uiComponents->naoLaunch->setText("launch Nao");    
+        uiComponents->naoLaunch->setText("Launch Nao");    
         uiComponents->naoLaunch->setDown(false);
         
         msg.data = 4;

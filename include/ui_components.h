@@ -139,7 +139,7 @@ public:
         trainingClear->setFont(f);
 
         trialLabel->adjustSize();
-        trialBegin->setText("Begin Trial");
+        trialBegin->setText("Build\nExercise Model");
         trialBegin->setFont(f);
         trialPractice->setText("Begin\nPractice");
         trialPractice->setFont(f);
